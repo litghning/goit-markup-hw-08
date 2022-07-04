@@ -1,0 +1,19 @@
+.about {
+    padding-top: 0;
+}
+
+.about__item {
+    position: relative;
+}
+
+.about__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: var(--white-color);
+    bottom: 0;
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    padding: 27px;
+}
