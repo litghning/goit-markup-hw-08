@@ -1,27 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="body">
-    <header class="header">
+    <header class="header" data-menu>
       <div class="header__page conteiner">
         <a href="" class="logo header__logo"
           >Web<span class="logo__header-accent">Studio</span></a
         >
+        <div class="header-mob">
+          <div class="conteiner container">
+            <div class="menu-top">
+              <button type="button" class="menu-btn is-open" data-menu-button>
+                <svg
+                  width="40"
+                  height="40"
+                  aria-label="Переключатель мобильного меню"
+                >
+                  <use
+                    class="btn-open"
+                    href="./image/symbol-defs.svg#icon-menu-mob"
+                  ></use>
+                  <use
+                    class="btn-close"
+                    href="./image/symbol-defs.svg#icon-close-mob"
+                  ></use>
+                </svg>
+              </button>
+              <nav class="header-mob__nav">
+                <ul class="header-mob__list list">
+                  <li class="header-mob__item">
+                    <a href="" class="header-mob__link current link">Студия</a>
+                  </li>
+                  <li class="header-mob__item">
+                    <a href="./portfolio.html" class="header-mob__link link"
+                      >Портфолио</a
+                    >
+                  </li>
+                  <li class="header-mob__item">
+                    <a href="" class="header-mob__link link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="menu-bottom">
+              <ul class="header-mob__contacs-list list">
+                <li class="header-mob__contacs-item">
+                  <a
+                    href="tel:+380961111111"
+                    class="header__link smarthone link"
+                  >
+                    <svg class="contacs__icon" width="10px" height="16px">
+                      <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="header-mob__contacs-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="header-mob__link envelope link"
+                  >
+                    <svg class="contacs__icon" width="16px" height="12px">
+                      <use href="./image/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="social list">
+                <li class="social__item">
+                  <a class="social__link link" href="./index.html">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link link" href="./portfolio.html"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="social__item">
+                  <a class="social__link link" href="">Facebook</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <nav class="header__nav">
           <ul class="header__list list">
             <li class="header__item">
@@ -116,32 +197,34 @@
           <ul class="about__list card__set list">
             <li class="about__item card__item">
               <img
-                srcset=""
+                class="about__img"
+                srcset="./image/img.jpg 1x, ./image/about-des1-2x.jpg 2x"
                 src="./image/img.jpg"
                 alt="написание кода"
                 width="370"
+                height="294"
               />
               <p class="about__text item-title">Десктопные приложения</p>
             </li>
             <li class="about__item card__item">
               <img
                 class="about__img"
-                srcset="./image/img-2.jpg 1x
-                ./image/about-des2-2x.jpg"
+                srcset="./image/img-2.jpg 1x, ./image/about-des2-2x.jpg 2x"
                 src="./image/img-2.jpg"
                 alt="разметка страницы"
                 width="370"
+                height="294"
               />
               <p class="about__text item-title">Мобильные приложения</p>
             </li>
             <li class="about__item card__item">
               <img
                 class="about__img"
-                srcset="./image/img-3.jpg 1x
-                ./image/about-des3-2x.jpg"
+                srcset="./image/img-3.jpg 1x, ./image/about-des3-2x.jpg 2x"
                 src="./image/img-3.jpg"
                 alt="выбор цвета"
                 width="370"
+                height="294"
               />
               <p class="about__text item-title">Дизайнерские решения</p>
             </li>
@@ -156,28 +239,28 @@
               <picture>
                 <source
                   srcset="
-                    ./image/                               1x,
-                    ./images/desktop/ourteam/img@2x-3D.jpg 2x
+                    ./image/team-des-1-2x.jpg 2x,
+                    ./image/team-des-1.jpg    1x
                   "
                   media="(min-width: 1200px)"
                 />
                 <source
                   srcset="
-                    ./images/tablet/ourteam/img@1x.jpg 1x,
-                    ./images/tablet/ourteam/img@2x.jpg 2x
+                    ./image/team-tab-1-2x.jpg 2x,
+                    ./image/team-tab-1.jpg    1x
                   "
                   media="(min-width: 768px)"
                 />
                 <source
                   srcset="
-                    ./images/mobile/ourteam/img@1xM.jpg 1x,
-                    ./images/mobile/ourteam/img@2xM.jpg 2x
+                    ./image/team-mob-1-2x.jpg 2x,
+                    ./image/team-mob-1.jpg    1x
                   "
-                  media="(max-width: 767px)"
+                  media="(max-width: 480px)"
                 />
                 <img
-                  src="./images/mobile/ourteam/img@1xM.jpg"
-                  alt="Игорь Демьяненко"
+                  src="./image/team-des-1.jpg"
+                  alt="Парень в красной рубашке"
                 />
               </picture>
               <div class="team__container">
@@ -242,7 +325,30 @@
               </div>
             </li>
             <li class="team__item card__item">
-              <img src="./image/img-6-2.jpg" alt="девушка" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./image/team-des-2-2x.jpg 2x,
+                    ./image/team-des-2.jpg    1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-tab-2-2x.jpg 2x,
+                    ./image/team-tab-2.jpg    1x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-mob-2-2x.jpg 2x,
+                    ./image/team-mob-2.jpg    1x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./image/team-des-2.jpg" alt="девушка" />
+              </picture>
 
               <div class="team__container">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -306,11 +412,33 @@
               </div>
             </li>
             <li class="team__item card__item">
-              <img
-                src="./image/img-7-2.jpg"
-                alt="парень в белой рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/team-des-3-2x.jpg 2x,
+                    ./image/team-des-3.jpg    1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-tab-3-2x.jpg 2x,
+                    ./image/team-tab-3.jpg    1x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-mob-3-2x.jpg 2x,
+                    ./image/team-mob-3.jpg    1x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img
+                  src="./image/team-des-3.jpg"
+                  alt="парень в белой рубашке"
+                />
+              </picture>
 
               <div class="team__container">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -374,11 +502,30 @@
               </div>
             </li>
             <li class="team__item card__item">
-              <img
-                src="./image/img-8-2.jpg"
-                alt="парень в футболке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/team-des-4-2x.jpg 2x,
+                    ./image/team-des-4.jpg    1x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-tab-4-2x.jpg 2x,
+                    ./image/team-tab-4.jpg    1x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/team-mob-4-2x.jpg 2x,
+                    ./image/team-mob-4.jpg    1x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./image/team-des-4.jpg" alt="парень в футболке" />
+              </picture>
 
               <div class="team__container">
                 <h3 class="team__title">Михаил Ермаков</h3>
@@ -443,7 +590,6 @@
             </li>
           </ul>
         </div>
-        Ï
       </section>
       <section class="clients section">
         <div class="conteiner">
@@ -525,7 +671,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="conteiner">
         <div class="footer__contant">
           <a href="" class="logo footer__logo"
@@ -626,8 +772,8 @@
           </form>
         </div>
       </div>
-    </footer>
-    <div class="backdrop is-hidden" data-modal>
+    </footer> -->
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__btn btn" data-modal-close>
           <svg class="icon__close" width="18px" height="18px">
@@ -703,7 +849,8 @@
           <button type="submit" class="hero__btn btn">Отправить</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

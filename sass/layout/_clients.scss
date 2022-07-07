@@ -1,13 +1,24 @@
 .clients__list {
     --card-item: 6;
-}
-
-.clients__item:last-child {
-    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .clients__item {
     color: var(--soc__grey-color);
+    width: calc((100% - 30px) / 2);
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 60px) / 3);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px) / 6);
+
+    }  
+}
+.clients__item:last-child{
+    margin-right: none;
 }
 .clients__soc__icon {
     fill: currentColor;
@@ -31,7 +42,6 @@
         color: var(--blue-color);
         border: 1px solid var(--blue-color);
     }
-    
 }
  
 

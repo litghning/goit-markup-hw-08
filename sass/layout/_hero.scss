@@ -1,23 +1,69 @@
 .hero {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 767px;
+    height: 400px;
+    margin: auto;
+    padding: 118px 0;
     text-align: center;
     background-color: var(--footer-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../image/hero.jpg);
-    padding: 200px 0;
+        url(../image/header-mob.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 0;
+
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../image/header-mob2x.jpg);
+    }
+
+    @include tablet {
+        max-width: 1199px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../image/header-tab.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../image/header-tab2x.jpg);
+        }
+    }
+
+    @include desktop {
+        max-width: 1600px;
+        height: 600px;
+        padding: 200px 0;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../image/hero.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../image/hero-2x.jpg);
+        }
+
+    }
+
 
 &__title {
+    font-size: 26px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    line-height: 1.6;
     letter-spacing: 0.06em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
     text-transform: uppercase;
     color: var(--white-color);
     margin-bottom: 30px;
+    @include desktop{
+        font-size: 44px;
+        line-height: 1.4;
+        max-width: 700px;
+    }
 }
 
 &__btn {

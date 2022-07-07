@@ -1,5 +1,6 @@
-.header {
+.header {position: absolute;
     border-bottom: 1px solid #ECECEC;
+    width: 100%;
 
 &__page{
     display: flex;
@@ -26,14 +27,17 @@
 }
 
 .header__link.current::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: var(--blue-color);
-    border-radius: 2px;
-    left: 0;
-    bottom: 0;
+    @include tablet{
+content: "";
+position: absolute;
+width: 100%;
+height: 4px;
+background: var(--blue-color);
+border-radius: 2px;
+left: 0;
+bottom: 0;
+    }
+  
 }
 
 
@@ -70,13 +74,131 @@
     }
   }
 
-
-
-
-
-
-
 .contacs__icon {
     margin-right: 10px;
     fill: currentColor;
+}
+.header__nav{
+    display: none;
+}
+.header__contacs-list{
+    display: none;
+}
+.menu-btn{
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+.menu-btn .btn-close{
+    display: none;
+}
+.menu-btn.is-open .btn-close{
+    display: flex;
+}
+.menu-btn.is-open .btn-open{
+    display: none;
+}
+.header-mob{
+    position: fixed;
+    background-color: var(--white-color);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 40px 48px 40px;
+    @include tablet {
+        display: none;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+}
+.header-mob__nav {
+   
+}
+
+.header-mob__list {
+  
+}
+
+.header-mob__item {
+    padding-bottom: 72px;
+}
+.header-mob__link{
+    display: block;
+    
+    transition: var(--cubic-bezier);
+font-weight: 500;
+font-size: 40px;
+line-height: 1.17px;
+letter-spacing: 0.02em;
+color: var(--black-color);
+}
+.header__link {
+   
+}
+
+.header-mob__item {}
+
+.header-mob__contacs-list {
+    margin-top: auto;
+padding-bottom: 64px;
+}
+
+
+
+.smarthone{
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+}
+.envelope{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    
+    color: var(dark-color);
+    
+}
+.header-mob__link:focus,
+.header-mob__link:hover{
+    color: var(--blue-color);
+}
+.header-mob__contacs-item {}
+
+.header__link {}
+
+.contacs__icon {}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    color: #2196F3;
+}
+
+.social__item {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 0 10px 0 10px;
+}
+
+.social__link {
+    
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+}
+
+.social__item:last-child {
+    border-right: none;
+    padding-right: 0;
 }

@@ -1,9 +1,16 @@
-.container {
+.conteiner {
     width: 100%;
+    margin: auto;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-
+    @include mobail {
+        width: 480px;
+    }
+    @include tablet{
+        width: 780px;
+    }
+    @include desktop{
+        width: 1200px;
+    }
 
 }
