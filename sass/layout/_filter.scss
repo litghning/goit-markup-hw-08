@@ -1,5 +1,8 @@
 .filter {
-    padding-top: 94px;
+    padding-top: 60px;
+    @include desktop{
+        padding-top: 94px;
+    }
 }
 
 .filter__btn-list {

@@ -909,7 +909,12 @@ span {
 }
 
 .filter {
-  padding-top: 94px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+  }
 }
 
 .filter__btn-list {
