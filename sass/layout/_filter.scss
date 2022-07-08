@@ -4,8 +4,19 @@
 
 .filter__btn-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px 8px;
+    margin-bottom: 40px;
+    
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 .filter__item:not(:last-child) {
