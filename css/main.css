@@ -1023,10 +1023,8 @@ span {
 }
 
 .modal {
-  max-width: 450px;
-  max-height: 609px;
-  height: 100%;
   width: 100%;
+  max-width: 450px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1040,8 +1038,8 @@ span {
 @media screen and (min-width: 1200px) {
   .modal {
     border-radius: 4px;
-    width: 528px;
-    min-height: 581px;
+    width: 100%;
+    max-width: 528px;
   }
 }
 .modal__title {
@@ -1149,7 +1147,6 @@ span {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   margin-bottom: 30px;
 }
 
@@ -1161,11 +1158,17 @@ span {
 
 .checkbox__text {
   width: 100%;
-  display: flex;
+  display: block;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__span {
