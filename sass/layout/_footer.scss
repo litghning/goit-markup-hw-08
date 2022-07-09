@@ -1,10 +1,14 @@
 .footer {
+    padding-top: 60px;
     padding-bottom: 60px;
     background: var(--footer-color);
+
 }
 
-@include tablet {
+
 .footer__top {
+    padding-bottom: 60px;
+    @include tablet {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
@@ -50,12 +54,6 @@
     }
 }
 
-.footer__soc-contant {
-
-    margin-top: 60px;
-}
-
-
 .footer-address {
 font-size: 14px;
 line-height: 1.71;
@@ -80,7 +78,10 @@ letter-spacing: 0.03;
 }
 
 .footer__contant {
-    padding-top: 60px;
+    padding-bottom: 60px;
+    @include tablet {
+        padding-bottom: 0;
+    }
     @include desktop {
         display: flex;
         flex-direction: column;
@@ -101,7 +102,7 @@ letter-spacing: 0.03;
     line-height: 1.71;
     letter-spacing: 0.03;
     text-transform: uppercase;
-
+margin-bottom: 20px;
     color: var(--white-color);
 }
 @include desktop{
@@ -111,10 +112,8 @@ letter-spacing: 0.03;
 }
 
 .footer-soc__list {
-    margin-bottom: 60px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 
 }
 
@@ -177,11 +176,6 @@ letter-spacing: 0.03;
 }
 
 .footer__form-contant{
-    @include tablet {
-        margin-top: 60px;
-    }
-
-
 
     @include desktop {
         margin-top: 0;

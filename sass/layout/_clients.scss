@@ -1,5 +1,5 @@
 .clients__list {
-    --card-item: 6;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -9,16 +9,16 @@
     color: var(--soc__grey-color);
     width: calc((100% - 30px) / 2);
     --card-item:2;
-    flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
+    
     
     @include tablet {
         --card-item: 3;
-        flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
+        
     }
     
     @include desktop {
         --card-item: 6;
-        flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
+      
     }
 }
 .clients__item:last-child{

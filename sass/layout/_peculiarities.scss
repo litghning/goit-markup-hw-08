@@ -5,17 +5,8 @@
         gap: 30px;
     }
     &__item{
-        --card-item:1;
-        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-        
-        @include tablet {
-            --card-item: 2;
-            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-        }
-        
         @include desktop {
             --card-item: 4;
-            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         }
     }
     &__title {

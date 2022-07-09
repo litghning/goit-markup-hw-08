@@ -14,6 +14,9 @@
 
 .modal {
 width: 100%;
+height: 100%;
+overflow: auto;
+max-height: 609px;
 max-width: 450px;
     position: absolute;
     top: 50%;
@@ -166,7 +169,7 @@ max-width: 450px;
 
 .checkbox__text {
     width: 100%;
-    display: block;
+    display: flex;
     align-items: center;
     font-size: 12px;
     line-height: 1.16;
@@ -186,6 +189,7 @@ max-width: 450px;
     background-color: transparent;
     margin-right: 5px;
     display: inline-flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     transition: backgraund-color var(--cubic-bezier), border var(--cubic-bezier);
@@ -217,8 +221,8 @@ max-width: 450px;
 }
 
 .checkbox__link {
-    text-decoration-line: underline;
+    // text-decoration-line: underline;
     margin-left: 1px;
     color: var(--blue-color);
-    border-bottom: 1px solid var(--blue-color);
+    // border-bottom: 1px solid var(--blue-color);
 }

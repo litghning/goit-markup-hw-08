@@ -71,19 +71,22 @@ img {
   }
 }
 
-.card-set {
+.card__set {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--card-gap-left);
-  row-gap: var(--card-gap-top);
 }
 @media screen and (min-width: 768px) {
-  .card-set {
+  .card__set {
     --card-item: 2;
   }
 }
+@media screen and (min-width: 1200px) {
+  .card__set {
+    --card-item: 3;
+  }
+}
 
-.card-item {
+.card__item {
   /* margin-top: var(--card-gap-top);
   margin-left: var(--card-gap-left); */
   /* flex-basis: calc(100% / var(--card-item) - var(--card-gap-left)); */
@@ -225,11 +228,11 @@ img {
   align-items: center;
 }
 
-.currentlink {
+.header-span {
   color: var(--blue-color);
 }
 
-span {
+.currentlink {
   color: var(--blue-color);
 }
 
@@ -448,7 +451,6 @@ span {
 
 .hero {
   max-width: 767px;
-  height: 400px;
   margin: auto;
   padding: 118px 0;
   text-align: center;
@@ -534,20 +536,9 @@ span {
   flex-wrap: wrap;
   gap: 30px;
 }
-.peculiarities__item {
-  --card-item:1;
-  flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
-}
-@media screen and (min-width: 768px) {
-  .peculiarities__item {
-    --card-item: 2;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
-  }
-}
 @media screen and (min-width: 1200px) {
   .peculiarities__item {
     --card-item: 4;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
   }
 }
 .peculiarities__title {
@@ -621,6 +612,11 @@ span {
 .team {
   background: var(--grey-color);
 }
+@media screen and (min-width: 1200px) {
+  .team {
+    --card-item:4;
+  }
+}
 .team__container {
   padding: 30px;
 }
@@ -642,19 +638,15 @@ span {
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  --card-item:1;
-  flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
 }
 @media screen and (min-width: 768px) {
   .team__item {
     --card-item: 2;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
     --card-item: 4;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
   }
 }
 
@@ -665,7 +657,6 @@ span {
 }
 
 .clients__list {
-  --card-item: 6;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -675,18 +666,15 @@ span {
   color: var(--soc__grey-color);
   width: calc((100% - 30px) / 2);
   --card-item:2;
-  flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
 }
 @media screen and (min-width: 768px) {
   .clients__item {
     --card-item: 3;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
     --card-item: 6;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
   }
 }
 
@@ -717,10 +705,14 @@ span {
 }
 
 .footer {
+  padding-top: 60px;
   padding-bottom: 60px;
   background: var(--footer-color);
 }
 
+.footer__top {
+  padding-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer__top {
     display: flex;
@@ -728,6 +720,7 @@ span {
     align-items: baseline;
   }
 }
+
 .footer__logo {
   display: block;
   text-align: center;
@@ -762,10 +755,6 @@ span {
   }
 }
 
-.footer__soc-contant {
-  margin-top: 60px;
-}
-
 .footer-address {
   font-size: 14px;
   line-height: 1.71;
@@ -789,7 +778,12 @@ span {
 }
 
 .footer__contant {
-  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__contant {
+    padding-bottom: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__contant {
@@ -812,6 +806,7 @@ span {
   line-height: 1.71;
   letter-spacing: 0.03;
   text-transform: uppercase;
+  margin-bottom: 20px;
   color: var(--white-color);
 }
 
@@ -821,10 +816,8 @@ span {
   }
 }
 .footer-soc__list {
-  margin-bottom: 60px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .footer .soc__link {
@@ -884,11 +877,6 @@ span {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .footer__form-contant {
-    margin-top: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer__form-contant {
     margin-top: 0;
@@ -971,23 +959,6 @@ span {
   gap: 30px;
 }
 
-.portfolio__item {
-  --card-item:1;
-  flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
-}
-@media screen and (min-width: 768px) {
-  .portfolio__item {
-    --card-item:2;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
-  }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio__item {
-    --card-item:3;
-    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
-  }
-}
-
 .portfolio__link {
   display: block;
   transition: box-shadow var(--cubic-bezier);
@@ -1052,6 +1023,9 @@ span {
 
 .modal {
   width: 100%;
+  height: 100%;
+  overflow: auto;
+  max-height: 609px;
   max-width: 450px;
   position: absolute;
   top: 50%;
@@ -1186,7 +1160,7 @@ span {
 
 .checkbox__text {
   width: 100%;
-  display: block;
+  display: flex;
   align-items: center;
   font-size: 12px;
   line-height: 1.16;
@@ -1208,6 +1182,7 @@ span {
   background-color: transparent;
   margin-right: 5px;
   display: inline-flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   transition: backgraund-color var(--cubic-bezier), border var(--cubic-bezier);
@@ -1239,10 +1214,8 @@ span {
 }
 
 .checkbox__link {
-  text-decoration-line: underline;
   margin-left: 1px;
   color: var(--blue-color);
-  border-bottom: 1px solid var(--blue-color);
 }
 
 .visually-hidden {
@@ -1268,7 +1241,7 @@ span {
   --footer-color: #2F303A;
   --card-gap-top: 30px;
   --card-gap-left: 30px;
-  --card-item: 3;
+  --card-item: 1;
   --soc__grey-color: #AFB1B8;
   --cubic-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --dark-blue-color: #188CE8;

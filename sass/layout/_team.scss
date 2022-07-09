@@ -1,6 +1,7 @@
 .team {
     background: var(--grey-color);
     @include desktop{
+        --card-item:4;
     }
    
 
@@ -28,19 +29,16 @@
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-        --card-item:1;
-        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-        
-        @include tablet {
-            --card-item: 2;
-            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-        }
-        
-        @include desktop {
-            --card-item: 4;
-            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-        }
-        
+       
+            @include tablet {
+                --card-item: 2;
+            
+            }
+            
+            @include desktop {
+                --card-item: 4;
+            
+            }
     }}
 
 

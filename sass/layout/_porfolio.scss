@@ -3,18 +3,8 @@
     flex-wrap: wrap;
     gap: 30px;
 }
-.portfolio__item{
-    --card-item:1;
-    flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-    @include tablet{
-        --card-item:2;
-        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-    }
-    @include desktop{
-        --card-item:3;
-        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
-    }
-}
+
+
 .portfolio__link {
     display: block;
     transition: box-shadow var(--cubic-bezier);
