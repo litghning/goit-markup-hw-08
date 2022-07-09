@@ -5,14 +5,17 @@
         gap: 30px;
     }
     &__item{
-        width: 100%;
+        --card-item:1;
+        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         
         @include tablet {
-            width: calc((100% - 30px) / 2);
+            --card-item: 2;
+            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         }
         
         @include desktop {
-            width: calc((100% - 90px) / 4);
+            --card-item: 4;
+            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         }
     }
     &__title {

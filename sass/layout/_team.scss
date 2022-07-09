@@ -28,13 +28,19 @@
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-        @media screen and (min-width: 768px) {
-            width: calc((100% - 30px) / 2);
+        --card-item:1;
+        flex-basis:calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
+        
+        @include tablet {
+            --card-item: 2;
+            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         }
         
-        @media screen and (min-width: 1200px) {
-            width: calc((100% - 90px) / 4);
+        @include desktop {
+            --card-item: 4;
+            flex-basis: calc((100% - ((var(--card-item) - 1) * var(--card-gap-left))) / var(--card-item));
         }
+        
     }}
 
 
