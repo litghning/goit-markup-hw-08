@@ -192,11 +192,6 @@ img {
   }
 }
 
-.link {
-  color: var(--black-color);
-  text-decoration: none;
-}
-
 .header__logo {
   padding: 16px 0;
 }
