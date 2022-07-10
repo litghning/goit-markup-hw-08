@@ -7,7 +7,7 @@
 
 
 .footer__top {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
     @include tablet {
     display: flex;
     justify-content: space-evenly;
@@ -78,9 +78,9 @@ letter-spacing: 0.03;
 }
 
 .footer__contant {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
     @include tablet {
-        padding-bottom: 0;
+        margin-bottom: 0;
     }
     @include desktop {
         display: flex;

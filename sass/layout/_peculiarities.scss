@@ -1,9 +1,5 @@
 .peculiarities {
-    &__list{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
+  
     &__item{
         @include desktop {
             --card-item: 4;
