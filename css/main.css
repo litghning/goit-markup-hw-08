@@ -713,6 +713,11 @@ img {
     align-items: baseline;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__top {
+    margin-bottom: 0;
+  }
+}
 
 .footer__logo {
   display: block;
@@ -801,6 +806,11 @@ img {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--white-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -923,10 +933,6 @@ img {
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-}
-
 .filter__btn {
   font-family: "Roboto";
   font-weight: 500;
@@ -973,6 +979,7 @@ img {
   position: absolute;
   top: 0;
   height: 100%;
+  overflow: auto;
   font-size: 18px;
   line-height: 1.56;
   padding: 77px 24px;
