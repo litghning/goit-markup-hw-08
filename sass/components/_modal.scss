@@ -206,12 +206,12 @@ max-width: 450px;
     transition: fill var(--cubic-bezier);
 }
 
-.checkbox__input:focus+.checkbox__text span,
-.checkbox__input:hover+.checkbox__text span {
+.checkbox__input:focus+.checkbox__text .checkbox__span,
+.checkbox__input:hover+.checkbox__text .checkbox__span {
     border-color: var(--blue-color);
 }
 
-.checkbox__input:checked+.checkbox__text span {
+.checkbox__input:checked+.checkbox__text .checkbox__span {
     background-color: var(--blue-color);
     border: 2px solid var(--blue-color);
 }
